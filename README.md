@@ -1,12 +1,15 @@
 # Graph-Editor-Android-bin
 built apk of [android app source](https://github.com/Student-Team-Projects/Graph-Editor-Android), [core source](https://github.com/Student-Team-Projects/Graph-Editor-Core)
-# Before install
+# Before installation
 Make sure you have android-tools installed. If not, type
 ```sh
 $ sudo pacman -S android-tools
 ```
-# Installation
-Make sure your phone is connected and developer options are enabled. Then type
+
+# Install on your android
+Clone this repo. Make sure your phone is connected and developer options are enabled.
 ```sh
-$ sudo pacman -S graph-editor-bin
+$ cd opt
+$ adb install -t graph-editor-for-android.apk
+$ adb shell am start -n "com.example.graph_editor/com.example.graph_editor.menu.MenuActivity" -a android.intent.action.MAIN -c android.intent.category.LAUNCHER
 ```
